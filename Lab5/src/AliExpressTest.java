@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Scanner;
 
 public class AliExpressTest {
     public static void main(String[] args) {
@@ -44,6 +45,10 @@ public class AliExpressTest {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
+            // 6. Wait for user to press Enter before closing browser
+            System.out.println("Press Enter to close the browser...");
+            new Scanner(System.in).nextLine();
 
         } catch(Exception e) {
             e.printStackTrace();
